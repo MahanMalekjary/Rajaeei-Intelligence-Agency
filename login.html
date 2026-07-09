@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IO Login</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="login-container">
+        <canvas id="particles"></canvas>
+        <div class="login-box glass fade-in">
+            <h1>IO Database</h1>
+            <form id="login-form">
+                <div class="form-group">
+                    <input type="text" id="username" class="input-field" placeholder="Username" required autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <input type="password" id="password" class="input-field" placeholder="Password" required>
+                </div>
+                <div id="login-error" style="color: var(--danger); font-size: 13px; margin-bottom: 15px; display: none;"></div>
+                <button type="submit" id="login-btn" class="btn" style="width: 100%;">Unlock</button>
+            </form>
+        </div>
+    </div>
+    <script type="module" src="js/login.js"></script>
+</body>
+</html>
