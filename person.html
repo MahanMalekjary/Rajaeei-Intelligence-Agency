@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IO Person</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="topbar">
+        <a href="index.html" class="btn" style="text-decoration: none; padding: 8px 16px;">← Back</a>
+    </div>
+
+    <div class="detail-header glass">
+        <h1 id="detail-name">Loading...</h1>
+        <p id="detail-subtitle"></p>
+        <div class="detail-actions">
+            <button id="edit-btn" class="btn">Edit</button>
+            <button id="duplicate-btn" class="btn" style="background: var(--bg-tertiary);">Duplicate</button>
+            <button id="export-json-btn" class="btn" style="background: var(--bg-tertiary);">Export JSON</button>
+            <button id="delete-btn" class="btn" style="background: var(--danger);">Delete</button>
+        </div>
+    </div>
+
+    <div class="detail-layout">
+        <div>
+            <h3 style="margin-bottom: 15px;">Gallery</h3>
+            <div id="gallery-grid" class="gallery-grid"></div>
+        </div>
+        <div id="detail-fields"></div>
+    </div>
+
+    <div id="fullscreen-viewer">
+        <img src="" alt="Fullscreen">
+    </div>
+
+    <div id="modal-overlay">
+        <div id="modal-container">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                <h2 id="modal-title">Edit Person</h2>
+                <button id="modal-close" class="btn-icon">&times;</button>
+            </div>
+            <input type="file" id="file-input" multiple accept="image/*" style="display: none;">
+            <div id="image-drop-zone">Drag & Drop Images Here or Click to Browse</div>
+            <form id="person-form"></form>
+            <button type="submit" form="person-form" id="modal-submit" class="btn" style="width: 100%; margin-top: 10px;">Update Person</button>
+        </div>
+    </div>
+
+    <script type="module" src="js/person.js"></script>
+</body>
+</html>
