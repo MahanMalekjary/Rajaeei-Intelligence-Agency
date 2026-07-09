@@ -14,7 +14,6 @@ async function getClient() {
 
 export async function getPeople(owner, searchQuery = '', filters = {}) {
     const sb = await getClient();
-    let query = sb.from('people').select('*').eq('owner', owner).order('created_at', { ascending: false });
 
     if (searchQuery) {
         query = query.or(`data->>name.ilike.%${searchQuery}%,data->>country.ilike.%${searchQuery}%,data->>city.ilike.%${searchQuery}%,data->>occupation.ilike.%${searchQuery}%`);
